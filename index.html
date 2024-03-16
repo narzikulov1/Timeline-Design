@@ -7,50 +7,68 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <h1 class="title">Timeline Design</h1>
-        <div class="wrapper">
-            <div class="line"></div>
-            <div class="card">
-                <span class="dot"></span>
+    <div class="timeline-container">
+        <!-- <div class="alert">fasjd</div> -->
+        <h1 class="timeline-title">Timeline Design</h1>
+
+        <button class="timeline__create" data-bs-toggle="modal" data-bs-target="#exampleModal">Habar qo'shish</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Matn Kiriting</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="title">Sarlavha:</label>
+                        <input id="title" type="text" placeholder="Sarlavha Kiriting">
+                        <label for="matn">Matn:</label>
+                        <textarea  id="matn" placeholder="Matn Kiriting"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            <div class="timeline-card">
+                <span class="timeline-dot"></span>
                 <h3>Heading 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta, voluptatum
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta,
+                    voluptatum
                     aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="time">30. Oct 2021</span>
+                <span class="timeline-time">30. Oct 2021</span>
             </div>
-            <div class="card">
-                <span class="dot"></span>
-                <h3>Heading 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta, voluptatum
+            <div class="timeline-card">
+                <span class="timeline-dot"></span>
+                <h3>Heading 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta,
+                    voluptatum
                     aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="time">30. Oct 2021</span>
+                <span class="timeline-time">30. Oct 2021</span>
             </div>
-            <div class="card">
-                <span class="dot"></span>
-                <h3>Heading 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta, voluptatum
+            <div class="timeline-card">
+                <span class="timeline-dot"></span>
+                <h3>Heading 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta,
+                    voluptatum
                     aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="time">30. Oct 2021</span>
-            </div>
-            <div class="card">
-                <span class="dot"></span>
-                <h3>Heading 4</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta, voluptatum
-                    aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="time">30. Oct 2021</span>
-            </div>
-            <div class="card">
-                <span class="dot"></span>
-                <h3>Heading 5</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta, voluptatum
-                    aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="time">30. Oct 2021</span>
+                <span class="timeline-time">30. Oct 2021</span>
             </div>
         </div>
     </div>
@@ -58,6 +76,7 @@
 
 
 
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

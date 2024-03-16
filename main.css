@@ -13,17 +13,31 @@
 }
 
 body {
-    background: var(--dark-1);
+    background: var(--dark-1)!important ;
 }
 
-.container {
+.timeline-container {
     max-width: 991px;
     width: 100%;
     padding: 0 16px;
     margin: 48px auto;
 }
 
-.title {
+.timeline__create{
+    background-color: var(--dars-2);
+    color: var(--ligt);
+    width: 500px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.timeline-title {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 36px;
@@ -31,14 +45,14 @@ body {
     text-align: center;
 }
 
-.wrapper {
+.timeline-wrapper {
     display: flex;
     flex-direction: column;
     position: relative;
     grid-gap: 16px;
 }
 
-.card {
+.timeline-card {
     padding: 24px;
     border-radius: 12px;
     background: var(--dars-2);
@@ -47,44 +61,44 @@ body {
     position: relative;
 }
 
-.card:nth-child(odd) {
+.timeline-card:nth-child(odd) {
     align-self: flex-end;
 
 }
 
-.card::before {
+.timeline-card::before {
     content: "";
     position: absolute;
     top: 12px;
     border: 12px solid;
 }
 
-.card:nth-child(odd)::before {
+.timeline-card:nth-child(odd)::before {
     right: 100%;
     border-color: transparent var(--dars-2) transparent transparent;
 }
 
-.card:nth-child(even)::before {
+.timeline-card:nth-child(even)::before {
     left: 100%;
     border-color: transparent transparent transparent var(--dars-2);
 }
 
-.card h3 {
+.timeline-card h3 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.card p {
+.timeline-card p {
     margin-bottom: 16px;
 }
 
-.card .time {
+.timeline-card .timeline-time {
     font-size: 14px;
     color: var(--grey);
 }
 
-.card .dot{
+.timeline-card .timeline-dot{
     position: absolute;
     top: 15px;
     width: 16px;
@@ -93,13 +107,13 @@ body {
     background: var(--ligt);
 }
 
-.card:nth-child(even) .dot{
+.timeline-card:nth-child(even) .timeline-dot{
     left: calc(100% + 22px);
 }
-.card:nth-child(odd) .dot{
+.timeline-card:nth-child(odd) .timeline-dot{
     right: calc(100% + 22px);
 }
-.line {
+.timeline-line {
     position: absolute;
     top: 15px;
     bottom: 0;
@@ -107,4 +121,38 @@ body {
     transform: translateX(-50%);
     width: 2px;
     background: var(--ligt);
+}
+
+/* Modal */
+.modal-content{
+    background-color: var(--dars-2)!important;
+    color: var(--ligt)!important;
+}
+
+.modal-body label{
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-body input, .modal-body textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.modal-body textarea{
+    height: 100px;
+}
+
+.btn-close{
+    --bs-btn-close-color: var(--ligt)!important;
+}
+
+
+@media screen and (max-width:768px) {
+    .timeline-line {
+        left: 12px;
+    }
+    
 }
