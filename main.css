@@ -13,7 +13,7 @@
 }
 
 body {
-    background: var(--dark-1)!important ;
+    background: var(--dark-1) !important;
 }
 
 .timeline-container {
@@ -23,7 +23,7 @@ body {
     margin: 48px auto;
 }
 
-.timeline__create{
+.timeline__create {
     background-color: var(--dars-2);
     color: var(--ligt);
     width: 500px;
@@ -57,7 +57,7 @@ body {
     border-radius: 12px;
     background: var(--dars-2);
     color: var(--ligt);
-    max-width: calc(50% - 30px)!important;
+    max-width: calc(50% - 30px) !important;
     position: relative;
 }
 
@@ -98,7 +98,7 @@ body {
     color: var(--grey);
 }
 
-.timeline-card .timeline-dot{
+.timeline-card .timeline-dot {
     position: absolute;
     top: 15px;
     width: 16px;
@@ -107,12 +107,14 @@ body {
     background: var(--ligt);
 }
 
-.timeline-card:nth-child(even) .timeline-dot{
+.timeline-card:nth-child(even) .timeline-dot {
     left: calc(100% + 22px);
 }
-.timeline-card:nth-child(odd) .timeline-dot{
+
+.timeline-card:nth-child(odd) .timeline-dot {
     right: calc(100% + 22px);
 }
+
 .timeline-line {
     position: absolute;
     top: 15px;
@@ -124,29 +126,31 @@ body {
 }
 
 /* Modal */
-.modal-content{
-    background-color: var(--dars-2)!important;
-    color: var(--ligt)!important;
+.modal-content {
+    background-color: var(--dars-2) !important;
+    color: var(--ligt) !important;
 }
 
-.modal-body label{
+.modal-body label {
     display: block;
     margin-top: 10px;
 }
 
-.modal-body input, .modal-body textarea{
+.modal-body input,
+.modal-body textarea {
     width: 100%;
     padding: 5px;
     border-radius: 5px;
     border: none;
     outline: none;
 }
-.modal-body textarea{
+
+.modal-body textarea {
     height: 100px;
 }
 
-.btn-close{
-    --bs-btn-close-color: var(--ligt)!important;
+.btn-close {
+    --bs-btn-close-color: var(--ligt) !important;
 }
 
 
@@ -154,5 +158,49 @@ body {
     .timeline-line {
         left: 12px;
     }
-    
+
+    .timeline__create{
+        width: 80%;
+    }
+
+    .timeline-card:nth-child(odd) {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+
+    .timeline-wrapper {
+        padding-left: 42px;
+
+    }
+
+    .timeline-card:nth-child(even) .timeline-dot {
+        right: calc(100% + 22px);
+        left: unset;
+    }
+
+    .timeline-card:nth-child(even)::before {
+        right: 100%;
+        left: unset;
+        border-color: transparent var(--dars-2) transparent transparent;
+    }
+
+    .timeline-card {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width:420px) {
+
+    .timeline-line,
+    .timeline-card .timeline-dot,
+    .timeline-card::before {
+        display: none;
+    }
+
+    .timeline-wrapper {
+        padding-left: 0;
+
+    }
+
 }
