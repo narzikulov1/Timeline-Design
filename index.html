@@ -34,42 +34,22 @@
                         <label for="title">Sarlavha:</label>
                         <input id="title" type="text" placeholder="Sarlavha Kiriting">
                         <label for="matn">Matn:</label>
-                        <textarea  id="matn" placeholder="Matn Kiriting"></textarea>
+                        <textarea id="matn" placeholder="Matn Kiriting"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button id="save" type="button" class="btn btn-primary" onclick="createTimeline()">Save
+                            changes</button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Modal -->
-        <div class="timeline-wrapper">
+        <div id="timeline-card" class="timeline-wrapper">
             <div class="timeline-line"></div>
-            <div class="timeline-card">
-                <span class="timeline-dot"></span>
-                <h3>Heading 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta,
-                    voluptatum
-                    aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="timeline-time">30. Oct 2021</span>
-            </div>
-            <div class="timeline-card">
-                <span class="timeline-dot"></span>
-                <h3>Heading 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta,
-                    voluptatum
-                    aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="timeline-time">30. Oct 2021</span>
-            </div>
-            <div class="timeline-card">
-                <span class="timeline-dot"></span>
-                <h3>Heading 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium nisi soluta,
-                    voluptatum
-                    aut enim maiores rerum consectetur ab reiciendis aperiam a voluptate dolorum!</p>
-                <span class="timeline-time">30. Oct 2021</span>
-            </div>
+          
+          
+            
         </div>
     </div>
 
@@ -77,6 +57,7 @@
 
 
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
