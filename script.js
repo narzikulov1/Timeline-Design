@@ -3,8 +3,6 @@ const modalTitle = document.getElementById("title");
 const modalPlaceholder = document.getElementById("matn");
 const saveModal = document.getElementById("save");
 const timelineBox = document.getElementById("timeline-card");
-const removeCard = document.getElementById("remove");
-
 
 function createTimeline() {
 
@@ -35,7 +33,7 @@ function createTimeline() {
 
         let img = document.createElement("img");
         img.src = "trash.png";
-        img.setAttribute("id", "remove");
+
         // create card
         timelineCard.appendChild(timelineDot);
         timelineCard.appendChild(title);
@@ -51,7 +49,7 @@ function createTimeline() {
 
     modalTitle.value = "";
     modalPlaceholder.value = "";
-
+    seveDeta();
 }
 
 
@@ -59,8 +57,20 @@ function createTimeline() {
 timelineBox.addEventListener("click", function (e) {
     if (e.target.tagName === "IMG") {
         e.target.parentElement.remove();
+        seveDeta();
     }
 }, false);
+
+function seveDeta() {
+    localStorage.setItem("data", timelineBox.innerHTML)
+}
+
+function showTask() {
+    timelineBox.innerHTML = localStorage.getItem("data");
+}
+
+// seveDeta();
+showTask();
 
 
 
