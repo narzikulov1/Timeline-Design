@@ -3,13 +3,12 @@ const modalTitle = document.getElementById("title");
 const modalPlaceholder = document.getElementById("matn");
 const saveModal = document.getElementById("save");
 const timelineBox = document.getElementById("timeline-card");
-
+const removeCard = document.getElementById("remove");
 
 
 function createTimeline() {
 
     if (modalTitle.value == "") {
-        console.log("Bosh");
         saveModal.removeAttribute("data-bs-dismiss")
     } else {
         let title = document.createElement("h3");
@@ -34,12 +33,15 @@ function createTimeline() {
         time.classList.add("timeline-time");
         time.innerHTML = `${nowTime.getDate()}. ${monthNames[month]}  ${nowTime.getFullYear()}`;
 
+        let img = document.createElement("img");
+        img.src = "trash.png";
+        img.setAttribute("id", "remove");
         // create card
         timelineCard.appendChild(timelineDot);
         timelineCard.appendChild(title);
         timelineCard.appendChild(placeholder);
         timelineCard.appendChild(time);
-
+        timelineCard.appendChild(img);
         // add card
         timelineBox.appendChild(timelineCard);
 
@@ -51,5 +53,17 @@ function createTimeline() {
     modalPlaceholder.value = "";
 
 }
+
+
+
+timelineBox.addEventListener("click", function (e) {
+    if (e.target.tagName === "IMG") {
+        e.target.parentElement.remove();
+    }
+}, false);
+
+
+
+
 
 
