@@ -119,7 +119,7 @@ body {
     right: calc(100% + 22px);
 }
 
-.timeline-line {
+.timeline-line{
     position: absolute;
     top: 15px;
     bottom: 0;
